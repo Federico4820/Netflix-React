@@ -1,18 +1,24 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { Link, useLocation } from "react-router-dom";
 
 function MyNav() {
+  const location = useLocation();
+  console.log(location);
+
   return (
     <Navbar collapseOnSelect expand="md" className="bg-black" variant="dark">
       <Container>
-        <Navbar.Brand href="#" className="text-danger">
+        <Link to="/" className="navbar-brand text-danger">
           EpiNetflix
-        </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#">Home</Nav.Link>
+            <Link to="/home" className=" nav-link">
+              Home
+            </Link>
             <Nav.Link href="#">TV Shows</Nav.Link>
             <Nav.Link href="#">Movies</Nav.Link>
             <Nav.Link href="#">Recently Added</Nav.Link>

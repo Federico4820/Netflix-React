@@ -36,8 +36,8 @@ class SingleFilm extends Component {
     return (
       <>
         {this.state.film.map((e) => (
-          <Col key={e.imdbID}>
-            <Card style={{ width: "30rem" }}>
+          <Col xs="12" key={e.imdbID}>
+            <Card style={{}} className="m-auto mb-3 border-black">
               <Card.Img
                 variant="top"
                 src={e.Poster}
